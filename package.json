@@ -1,0 +1,18 @@
+{
+  "name": "timers-benchmark",
+  "version": "0.1.0",
+  "description": "Benchmark for setTimeout and clearTimeout.",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AlexeyKupershtokh/timers-benchmark.git"
+  },
+  "dependencies": {
+    "benchmark": "*"
+  },
+  "author": "Alexey Kupershtokh",
+  "license": "BSD"
+}

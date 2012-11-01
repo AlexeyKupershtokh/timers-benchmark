@@ -32,12 +32,9 @@ for (var v in timer_modules) {
     suite.add(v + '; ' + patch, '\
       var setTimeout2   = timer_modules[\'' + v + '\'][\'' + patch + '\'].setTimeout; \
       var clearTimeout2 = timer_modules[\'' + v + '\'][\'' + patch + '\'].clearTimeout; \
-      var y = setTimeout2(noop, 1); \
-      for(var i = 0; i < 1000; i++) { \
-        var t = setTimeout2(noop, 1); \
-        clearTimeout2(t); \
-      } \
-      clearTimeout2(y); \
+      var t = []; \
+      for (var i = 0; i < 1000; i++) t.push(setTimeout2(noop, 1)); \
+      for (var i = 0; i < 1000; i++) clearTimeout2(t[i]); \
     ');
   }
 }

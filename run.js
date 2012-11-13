@@ -52,4 +52,4 @@ suite.on('error', function(event) {
 .on('complete', function() {
   console.log('Fastest is ' + this.filter('fastest').pluck('name'));
 })
-.run();
+.run({async: true});

@@ -44,7 +44,7 @@ suite.on('setup', function() {
 });
 suite.on('cycle', function(event) {
   while(event.target.name.length < 35) { event.target.name += ' '; }
-  console.log(String(event.target));
+  console.log(String(event.target), (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2), 'Mb');
 })
 suite.on('error', function(event) {
   console.log(event.target.error);

@@ -3,18 +3,18 @@ var Benchmark = require('benchmark').Benchmark;
 timer_modules = {
   "0.8.12" : {
     "_ = null": require('./timers_0.8.12.1.js'),
-    "delete _; _ = null": require('./timers_0.8.12.2.js'),
-    "keep _": require('./timers_0.8.12.3.js'),
+    //"delete _; _ = null": require('./timers_0.8.12.2.js'),
+    //"keep _": require('./timers_0.8.12.3.js'),
   },
   "0.9.3" : {
     "_ = null": require('./timers_0.9.3.1.js'),
-    "delete _; _ = null": require('./timers_0.9.3.2.js'),
-    "keep _": require('./timers_0.8.12.3.js'),
+    //"delete _; _ = null": require('./timers_0.9.3.2.js'),
+    //"keep _": require('./timers_0.8.12.3.js'),
   },
   "0.9.3 optimized" : {
     "_ = null": require('./timers_my.1.js'),
-    "delete _; _ = null": require('./timers_my.2.js'),
-    "keep _": require('./timers_my.3.js'),
+    //"delete _; _ = null": require('./timers_my.2.js'),
+    //"keep _": require('./timers_my.3.js'),
   }
 }
 
